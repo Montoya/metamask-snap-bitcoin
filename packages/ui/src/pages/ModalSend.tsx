@@ -20,7 +20,7 @@ export default function ModalSend(props: ModalSendProps) {
 	);
 
 	const { createTransaction } = useCreateTransaction(
-		process.env.REACT_APP_SNAP_ID!
+		'local:http://localhost:8081'
 	);
 
 	return props.isVisible

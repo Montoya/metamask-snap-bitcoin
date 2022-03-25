@@ -7,7 +7,7 @@ import './Dashboard.css';
 
 export default function Dashboard() {
 	const { connect, error, isConnected } = useConnect(
-		process.env.REACT_APP_SNAP_ID!
+		'local:http://localhost:8081'
 	);
 
 	return (

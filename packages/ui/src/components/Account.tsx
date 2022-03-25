@@ -11,7 +11,7 @@ export default function Account() {
 	const [account, setAccount] = useState<string | null | undefined>(null);
 
 	const { getAccount } = useAccount(
-		process.env.REACT_APP_SNAP_ID!,
+		'local:http://localhost:8081',
 		redux.state.network
 	);
 
