@@ -11,12 +11,12 @@ const useConnect = (snapId: string) => {
 					method: 'wallet_enable',
 					params: [
 						{
-							wallet_plugin: { [snapId]: {} },
+							wallet_snap: { [snapId]: {} },
 						},
 					],
 				});
 
-				if (!!callback.plugins) {
+				if (!!callback.snaps) {
 					setIsConnected(true);
 				}
 			} catch (error: any) {

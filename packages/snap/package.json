@@ -9,22 +9,13 @@
     "url": "https://github.com/MVPWorkshop/metamask-snap-bitcoin.git"
   },
   "scripts": {
-    "build:snap": "mm-snap build",
+    "build:snap": "mm-snap build --strip=false",
     "start": "mm-snap serve"
   },
   "dependencies": {
     "bitcoinjs-lib": "^5.2.0",
     "dotenv": "^10.0.0",
     "node-fetch": "^2.0.0",
-    "snaps-cli": "^0.4.2"
-  },
-  "web3Wallet": {
-    "bundle": {
-      "local": "dist/bundle.js",
-      "url": "http://localhost:8081/dist/bundle.js"
-    },
-    "initialPermissions": {
-      "snap_confirm": {}
-    }
+    "@metamask/snaps-cli": "^0.10.6"
   }
 }

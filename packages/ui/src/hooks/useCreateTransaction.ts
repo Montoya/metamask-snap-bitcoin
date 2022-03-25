@@ -12,7 +12,7 @@ const useCreateTransaction = (snapId: string) => {
 	) => {
 		try {
 			const response = await (window as any).ethereum.request({
-				method: 'wallet_invokePlugin',
+				method: 'wallet_invokeSnap',
 				params: [
 					snapId,
 					{

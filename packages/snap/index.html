@@ -64,7 +64,7 @@
     async function getAccount () {
       try {
         const response = await ethereum.request({
-          method: 'wallet_invokePlugin',
+          method: 'wallet_invokeSnap',
           params: [snapId, {
             method: 'getAccount',
             params: [networkDropdown.value]
@@ -87,7 +87,7 @@
     async function getBalance () {
       try {
         const response = await ethereum.request({
-          method: 'wallet_invokePlugin',
+          method: 'wallet_invokeSnap',
           params: [snapId, {
             method: 'getBalance',
             params: [wallet]
