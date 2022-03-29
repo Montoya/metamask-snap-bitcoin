@@ -1,7 +1,11 @@
 {
   "name": "bitcoin-snap",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/bundle.js",
+  "files": [
+    "dist/",
+    "snap.manifest.json"
+  ],
   "license": "MIT",
   "description": "Metamask plugin for interacting with Bitcoin",
   "repository": {

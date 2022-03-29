@@ -37,8 +37,9 @@
   <script>
 
     // we identify the Snap by the location of its package.json file
-    const snapId = new URL('package.json', window.location.href).toString()
-
+    //const snapId = new URL('package.json', window.location.href).toString()
+    const snapId = `local:${window.location.href}`;
+    
     const connectButton = document.querySelector('button.connect')
     const getAddressButton = document.querySelector('button.getAddress')
     const getBalanceButton = document.querySelector('button.getBalance')
@@ -55,7 +56,7 @@
       await ethereum.request({
         method: 'wallet_enable',
         params: [{
-          wallet_plugin: { [snapId]: {} },
+          wallet_snap: { [snapId]: {} },
         }]
       })
     }
