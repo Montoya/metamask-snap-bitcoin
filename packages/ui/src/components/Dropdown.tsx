@@ -17,7 +17,7 @@ export default function Dropdown(props: DropdownProps) {
 					redux.dispatch({ type: CHANGE_NETWORK, payload: ev.target.value })
 				}>
 				{props.options.map((option) => (
-					<option>{option}</option>
+					<option key={option}>{option}</option>
 				))}
 			</select>
 			<div className='select_arrow'></div>
